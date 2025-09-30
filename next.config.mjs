@@ -7,7 +7,7 @@ const nextConfig = {
     ignoreDuringBuilds: false,
   },
   images: {
-    domains: ['gateway.pinata.cloud', 'ipfs.io'],
+    domains: ['i.imgur.com', 'gateway.pinata.cloud'],
   },
 };
 
