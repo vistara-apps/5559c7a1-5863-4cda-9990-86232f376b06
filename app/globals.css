@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Finance-inspired theme: Dark navy with gold accents */
+  --color-bg: hsl(220, 30%, 8%);
+  --color-fg: hsl(210, 40%, 98%);
+  --color-accent: hsl(45, 100%, 50%);
+  --color-accent-glow: hsl(45, 100%, 60%);
+  --color-primary: hsl(220, 70%, 50%);
+  --color-primary-hover: hsl(220, 70%, 45%);
+  --color-surface: hsl(220, 25%, 12%);
+  --color-surface-glass: hsla(220, 25%, 12%, 0.6);
+  --color-border: hsl(220, 20%, 20%);
+  --color-text-muted: hsl(215, 15%, 65%);
+  --color-success: hsl(142, 76%, 36%);
+  --color-warning: hsl(38, 92%, 50%);
+  --color-error: hsl(0, 84%, 60%);
+  
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 40px;
+  
+  --shadow-card: 0 8px 32px hsla(220, 70%, 10%, 0.4);
+  --shadow-glow: 0 0 20px hsla(45, 100%, 60%, 0.6);
+  --shadow-wheel: 0 0 80px hsla(45, 100%, 60%, 0.3), inset 0 0 40px hsla(45, 100%, 60%, 0.1);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-bg text-fg antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: var(--color-surface-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid;
+    border-color: var(--color-border);
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-accent to-yellow-500 text-bg px-6 py-3 rounded-lg font-medium hover:from-yellow-500 hover:to-accent transition-all duration-200 shadow-glow hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-surface text-fg px-6 py-3 rounded-lg font-medium hover:bg-opacity-80 transition-all duration-200 border border-border;
+  }
+  
+  .metric-card {
+    @apply glass-card p-4 hover:bg-opacity-15 transition-all duration-200;
+  }
+  
+  .wheel-container {
+    @apply relative w-full max-w-md mx-auto;
+    filter: drop-shadow(var(--shadow-wheel));
+  }
+  
+  .prize-slice {
+    @apply transition-all duration-300 hover:brightness-110;
+  }
+  
+  .leaderboard-row {
+    @apply glass-card p-4 mb-2 hover:bg-opacity-20 transition-all duration-200 cursor-pointer;
+  }
+  
+  .streak-badge {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-accent to-yellow-500 text-bg text-sm font-medium;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-yellow-500 bg-clip-text text-transparent;
+  }
+  
+  .border-gradient {
+    border-image: linear-gradient(to right, var(--color-accent), hsl(45, 100%, 60%)) 1;
+  }
+}
