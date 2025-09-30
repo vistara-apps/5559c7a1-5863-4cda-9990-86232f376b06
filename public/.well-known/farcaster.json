@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "SpinBase",
+    "subtitle": "Built with Zara",
+    "description": "SpinBase is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://5559c7a158634cda999086232f376b06-y286.vercel.app",
+    "splashImageUrl": "https://5559c7a158634cda999086232f376b06-y286.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://5559c7a158634cda999086232f376b06-y286.vercel.app/image.png",
+    "tagline": "SpinBase",
+    "screenshotUrls": [
+      "https://5559c7a158634cda999086232f376b06-y286.vercel.app/screenshot.png",
+      "https://5559c7a158634cda999086232f376b06-y286.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://5559c7a158634cda999086232f376b06-y286.vercel.app/api/webhook"
+  }
+}

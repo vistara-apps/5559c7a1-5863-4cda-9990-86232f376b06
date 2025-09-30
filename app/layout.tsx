@@ -1,30 +1,24 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import { Providers } from './providers';
-
-const inter = Inter({ subsets: ['latin'] });
+import type { Metadata } from 'next'
+import './globals.css'
+import { ThemeProvider } from './components/ThemeProvider'
 
 export const metadata: Metadata = {
-  title: 'SpinBase - Social Spins on Base',
-  description: 'Launch viral spinning wheels for giveaways, discounts, and on-chain rewards',
-  openGraph: {
-    title: 'SpinBase',
-    description: 'Social spins that reward your community',
-    images: ['/og-image.png'],
-  },
-};
+  title: 'Base Mini App',
+  description: 'Built with Zara',
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Providers>{children}</Providers>
+      <body>
+        <ThemeProvider defaultTheme="default">
+          {children}
+        </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
